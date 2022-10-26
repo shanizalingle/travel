@@ -23,10 +23,10 @@ _This application uses a travel API_
 * _In your terminal enter_
 
 ```json
- git clone https://github.com/ShanizaLingle/pierres-treats
+ git clone https://github.com/shanizalingle/travel.git
 ```
 * _Open the directory in Visual Studio Code_
-* _In VS Code terminal, navigate to the Bakery directory_ 
+* _In VS Code terminal, navigate to the Travel directory_ 
 * _In VS Code terminal, run_
 
 ```json
@@ -39,13 +39,13 @@ _This application uses a travel API_
  $ dotnet build
  ```
 
-* _Create file named "appsettings.json" in the /Bakery folder_
+* _Create file named "appsettings.json" in the /Travel folder_
 * _Enter the following into the file_
 
 ```json
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=sillystringz_factory;uid=root;pwd=YOUR_PASSWORD;"
+      "DefaultConnection": "Server=localhost;Port=3306;database=travel;uid=root;pwd=YOUR_PASSWORD;"
   }
 }
 ```
