@@ -17,10 +17,10 @@ namespace Travel.Controllers
         {
             _logger = logger;
         }
-
+        // [Route("/")]
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Reviews");
+            return View();
         }
 
         public IActionResult Privacy()

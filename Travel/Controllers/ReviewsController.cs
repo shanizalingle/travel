@@ -13,7 +13,8 @@ namespace Travel.Controllers
 {
     public class ReviewsController : Controller
     {
-
+      
+      [HttpGet("/")]
       public IActionResult Index()
       {
         var allReviews = Review.GetReviews();
