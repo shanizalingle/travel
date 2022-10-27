@@ -1,0 +1,17 @@
+@{
+  ViewData["Title"] = "Details";
+}
+
+<h1>Review Details:</h1>
+
+<ul>
+  <li>Name: @Model.Name</li>
+  <li>City: @Model.City</li>
+  <li>Country: @Model.Country</li>
+  <li>Rating: @Model.Rating</li>
+  <li>Description: @Model.Description</li>
+</ul>
+<br>
+
+<p>@Html.ActionLink("Edit Review", "Edit", new { id = Model.ReviewId})</p>
+<p>@Html.ActionLink("Delete Review", "Delete", new {id = Model.ReviewId})</p>

@@ -1,4 +1,28 @@
 
+@using Travel.Models;
+
+<h1>New Review:</h1>
+<hr>
+<form action="/reviews" method="post">
+    <label for="name">Review Name:</label>
+    <input id="name" name="name" type="text">
+    <br>
+    <label for="city">City:</label>
+    <input id="city" name="city" type="text">
+    <br>
+    <label for="country">Country:</label>
+    <input id="country" name="country" type="text">
+    <br>
+    <label for="rating">Rating:</label>
+    <input id="rating" name="rating" type="text">
+    <br>
+    <label for="description">Description:</label>
+    <input id="description" name="description" type="text">
+    <br>
+    <button type="submit">Submit Review</button>
+</form>
+<br>
+
 <h1>All Reviews:</h1>
 
 <ol>

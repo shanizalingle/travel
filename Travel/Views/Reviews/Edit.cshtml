@@ -1,0 +1,40 @@
+@model Travel.Models.Review;
+
+<h1>Edit Review:</h1>
+<hr>
+
+@* <form action="/reviews/details/@(Model.ReviewId)" method="post">
+    <label for="name">Review Name:</label>
+    <input id="name" name="name" type="text">
+    <br>
+    <label for="city">City:</label>
+    <input id="city" name="city" type="text">
+    <br>
+    <label for="country">Country:</label>
+    <input id="country" name="country" type="text">
+    <br>
+    <label for="rating">Rating:</label>
+    <input id="rating" name="rating" type="text">
+    <br>
+    <label for="description">Description:</label>
+    <input id="description" name="description" type="text">
+    <br>
+    <button type="submit">Submit Review</button>
+</form> *@
+
+@using (Html.BeginForm("Edit", "Reviews", FormMethod.Post))
+{
+  @Html.HiddenFor(model => model.ReviewId);
+
+  @Html.LabelFor(model => model.Name);
+  @Html.EditorFor(model => model.Name);
+  @Html.LabelFor(model => model.City);
+  @Html.EditorFor(model => model.City);
+  @Html.LabelFor(model => model.Country);
+  @Html.EditorFor(model => model.Country);
+  @Html.LabelFor(model => model.Rating);
+  @Html.EditorFor(model => model.Rating);
+  @Html.LabelFor(model => model.Description);
+  @Html.EditorFor(model => model.Description);
+  <input type="submit" value="Save">
+}

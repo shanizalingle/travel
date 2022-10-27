@@ -17,10 +17,12 @@ namespace Travel.Controllers
         {
             _logger = logger;
         }
-        // [Route("/")]
+
+        [HttpGet("/")]
         public IActionResult Index()
         {
-            return View();
+            var allReviews = Review.GetReviews();
+            return View(allReviews);
         }
 
         public IActionResult Privacy()

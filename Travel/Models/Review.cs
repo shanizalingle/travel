@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
-using System.Drawing;
 
 namespace Travel.Models
 {
@@ -13,8 +11,8 @@ namespace Travel.Models
     public string Name { get; set; }
     public string City { get; set; }
     public string Country { get; set; }
-    public int Rating { get; set; }
     public string Description { get; set; }
+    public int Rating { get; set; }
 
     public static List<Review> GetReviews()
     {
@@ -26,7 +24,6 @@ namespace Travel.Models
 
       return reviewList;
     }
-
     public static Review GetDetails(int id)
     {
       var apiCallTask = ApiHelper.Get(id);
@@ -43,13 +40,11 @@ namespace Travel.Models
       string jsonReview = JsonConvert.SerializeObject(review);
       var apiCallTask = ApiHelper.Post(jsonReview);
     }
-
     public static void Put(Review review)
     {
       string jsonReview = JsonConvert.SerializeObject(review);
       var apiCallTask = ApiHelper.Put(review.ReviewId, jsonReview);
     }
-    
     public static void Delete(int id)
     {
       var apiCallTask = ApiHelper.Delete(id);
